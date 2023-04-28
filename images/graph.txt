@@ -1,0 +1,20 @@
+graph {
+    rankdir=LR;
+    1[label=<Z<SUB>1</SUB>>];
+    2[label=<Z<SUB>2</SUB>>];
+    3[label=<Z<SUB>3</SUB>>];
+    4[label=<Z<SUB>4</SUB>>];
+    5[label=<Z<SUB>5</SUB>>];
+    subgraph cluster1 {
+        1 -- 2 [label=<X<SUB>a</SUB>>];
+        2 -- 3 [label=<X<SUB>b</SUB>>]; 
+        3 -- 1 [label=<X<SUB>c</SUB>>];
+        label=<C<SUB>1</SUB>>;
+    }
+    3 -- 4 [label=<X<SUB>d</SUB>>];
+    subgraph cluster3 {
+        4 -- 5 [label=<X<SUB>e</SUB>>];
+        5 -- 3 [label=<X<SUB>f</SUB>>];
+        label=<C<SUB>3</SUB>>;
+    }
+}
